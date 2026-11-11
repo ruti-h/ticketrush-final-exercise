@@ -1,3 +1,6 @@
 node_modules/
 .DS_Store
 *.log
+
+# Local secrets – never commit (use js/config.example.js as a template)
+js/config.js
