@@ -1,0 +1,75 @@
+### git worktree list
+C:/Users/user1/Desktop/ticketrush/ticketrush-final-exercise  f3520e6 [main]
+C:/Users/user1/Desktop/ticketrush/wt-early-access            b7a3dd4 [feature/early-access]
+C:/Users/user1/Desktop/ticketrush/wt-hotfix-price            1b9e942 [hotfix/price]
+C:/Users/user1/Desktop/ticketrush/wt-review-noa              eb16412 [review/noa-refund]
+C:/Users/user1/Desktop/ticketrush/wt-waitlist                1bc28bd [feature/waitlist]
+
+### git branch -a -vv
++ feature/early-access                       b7a3dd4 (C:/Users/user1/Desktop/ticketrush/wt-early-access) feat(pricing): raise club-member ticket quota from 4 to 6
++ feature/waitlist                           1bc28bd (C:/Users/user1/Desktop/ticketrush/wt-waitlist) test(waitlist): cover normalization, validation, duplicates and immutability
++ hotfix/price                               1b9e942 (C:/Users/user1/Desktop/ticketrush/wt-hotfix-price) Revert "perf: faster price formatting"
+* main                                       f3520e6 [origin/main: ahead 17] merge: restore standard Revert commit for the ₪0.00 price-format fix
++ review/noa-refund                          eb16412 (C:/Users/user1/Desktop/ticketrush/wt-review-noa) [origin/noa/refund: ahead 1] docs(review): request changes on noa/refund – service fee is wrongly refunded
+  remotes/origin/HEAD                        -> origin/main
+  remotes/origin/dana/promo                  d4b1e35 test: add student discount tests
+  remotes/origin/main                        6e5b25d feat: friendlier message for empty quantity
+  remotes/origin/noa/refund                  f7e8785 test: refund tests
+  remotes/origin/ruth/fixes                  fee9f58 wip: try new fonts
+  remotes/origin/ruti-h/feature/early-access b7a3dd4 feat(pricing): raise club-member ticket quota from 4 to 6
+  remotes/origin/ruti-h/feature/waitlist     1bc28bd test(waitlist): cover normalization, validation, duplicates and immutability
+  remotes/origin/ruti-h/hotfix/price         26e0c05 fix(format): revert "perf: faster price formatting" (prices showed ₪0.00)
+  remotes/origin/ruti-h/main                 34d00e7 merge: waitlist feature into main
+  remotes/origin/ruti-h/result               d208b46 result ruti-h 96/100
+  remotes/origin/ruti-h/review/noa-refund    eb16412 docs(review): request changes on noa/refund – service fee is wrongly refunded
+
+### git log --graph --oneline --all -n 80
+*   f3520e6 (HEAD -> main, tag: v1.1) merge: restore standard Revert commit for the ₪0.00 price-format fix
+|\  
+| * 1b9e942 (hotfix/price) Revert "perf: faster price formatting"
+| * 5f8ee12 Revert "fix(format): revert \"perf: faster price formatting\" (prices showed ₪0.00)"
+|/  
+*   34d00e7 (tag: ruti-h/v1.1, origin/ruti-h/main) merge: waitlist feature into main
+|\  
+| * 1bc28bd (origin/ruti-h/feature/waitlist, feature/waitlist) test(waitlist): cover normalization, validation, duplicates and immutability
+| * 4afa628 feat(waitlist): add joinWaitlist for sold-out events
+* |   0471479 merge: early-access member pricing with student promo into main
+|\ \  
+| * | b7a3dd4 (origin/ruti-h/feature/early-access, feature/early-access) feat(pricing): raise club-member ticket quota from 4 to 6
+| * | 2f6dd37 merge: bring the ₪0.00 price-format hotfix from main into early-access
+| |\| 
+| * |   1cd23ad merge: combine Dana's student promo with early-access pricing
+| |\ \  
+| | * | d4b1e35 (origin/dana/promo) test: add student discount tests
+| | * | 0841085 feat: student discount (15%)
+| * | | ee089ac test(pricing): cover member discount, quotas and invalid quantities
+| * | | 94efdb0 feat(pricing): add early-access member discount and ticket quota
+| |/ /  
+* | | f8d1b6a security: stop tracking js/config.js (payment API key)
+* | | 4639e01 fix: correct concert date in events.js
+| |/  
+|/|   
+* | 26e0c05 (origin/ruti-h/hotfix/price) fix(format): revert "perf: faster price formatting" (prices showed ₪0.00)
+|/  
+| * d208b46 (origin/ruti-h/result) result ruti-h 96/100
+| * eb16412 (origin/ruti-h/review/noa-refund, review/noa-refund) docs(review): request changes on noa/refund – service fee is wrongly refunded
+| * f7e8785 (origin/noa/refund) test: refund tests
+| * 61bfedd feat: refund calculation for cancelled orders
+|/  
+| * fee9f58 (origin/ruth/fixes) wip: try new fonts
+| * 72063d7 debug: dump state to console
+| * 20cd6a9 WIP: try removing ticket limits
+| * 8284d98 fix: correct concert date in events.js
+| * 339324e WIP: new checkout flow (do not merge)
+|/  
+* 6e5b25d (origin/main, origin/HEAD) feat: friendlier message for empty quantity
+* 9119fe2 fix: typo in hero heading
+* a61f4ad feat: add footer with links
+* 73924c4 perf: faster price formatting
+* 03bd4dd docs: update artist lineup text
+* c44fbf8 feat: add early-access promo banner
+* 62f48b5 (tag: v1.0) feat: purchase page UI
+* f4c58bc feat: payment provider config
+* 2cc7e97 feat: event details data
+* 8a944f6 feat: ticket price calculation with tests
+* ed1b1e9 Initial commit: project skeleton and exercise tooling
